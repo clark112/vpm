@@ -1,37 +1,24 @@
 {
   "ovpn_file":[
-    {"id":0,"file":"
-setenv FORWARD_COMPATIBLE 1
-client
-server-poll-timeout 4
-nobind
+    {"id":0,"file":"dev tun
 proto udp
+
 remote 219.100.37.199 1195
-remote 219.100.37.199 1195
-remote 219.100.37.199 443 tcp
-remote 219.100.37.199 1195
-remote 219.100.37.199 1195
-remote 219.100.37.199 1195
-remote 219.100.37.199 1195
-remote 219.100.37.199 1195 
-dev tun
-dev-type tun
-ns-cert-type server
-reneg-sec 604800
-sndbuf 0
-rcvbuf 0
-# NOTE: LZO commands are pushed by the Access Server at connect time.
-# NOTE: The below line doesn't disable LZO.
-comp-lzo no
-verb 3
+
+
+;http-proxy-retry
+;http-proxy [proxy server] [proxy port]
+
+
+cipher AES-128-CBC
+auth SHA1
 resolv-retry infinite
+nobind
 persist-key
 persist-tun
 client
-
-setenv PUSH_PEER_INFO
-cipher AES-128-CBC
-auth SHA1
+verb 3
+#auth-user-pass
 
 <ca>
 -----BEGIN CERTIFICATE-----
@@ -67,7 +54,6 @@ emyPxgcYxn/eR44/KJ4EBs+lVDR3veyJm+kXQ99b21/+jh5Xos1AnX5iItreGCc=
 -----END CERTIFICATE-----
 
 </ca>
-
 <cert>
 -----BEGIN CERTIFICATE-----
 MIICxjCCAa4CAQAwDQYJKoZIhvcNAQEFBQAwKTEaMBgGA1UEAxMRVlBOR2F0ZUNs
@@ -118,7 +104,7 @@ wmE9Mmlbq1emDeROivjCfoGhR3kZXW1pTKlLh6ZMUQUOpptdXva8XxfoqQwa3enA
 M7muBbF0XN7VO80iJPv+PmIZdEIAkpwKfi201YB+BafCIuGxIF50Vg==
 -----END RSA PRIVATE KEY-----
 
-</key>},
+</key>"},
      
     ]
 }
