@@ -17,5 +17,6 @@
   ],
   "free":[
     {"id":0, "file":0, "city":"Japan","country":"Japan","image":"japan","ip":"219.100.37.199","active":"true","signal":"a"},
+    {"id":1, "file":1, "city":"France","country":"France","image":"France","ip":"fr1.freevpn4you.net","active":"true","signal":"a"},
   ]
 }
